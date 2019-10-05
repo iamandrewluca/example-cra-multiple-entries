@@ -16,8 +16,8 @@
     "entry-start": "npm run entry-link && react-scripts start",
     "entry-build": "npm run entry-link && react-scripts build && mv build build-$ENTRY",
 
-    "start-admin": "ENTRY=admin npm run entry-start",
-    "build-admin": "ENTRY=admin npm run entry-build",
+    "start-admin": "PUBLIC_URL='/client' ENTRY=admin npm run entry-start",
+    "build-admin": "PUBLIC_URL='/admin' ENTRY=admin npm run entry-build",
 
     "start-client": "ENTRY=client npm run entry-start",
     "build-client": "ENTRY=client npm run entry-build",
