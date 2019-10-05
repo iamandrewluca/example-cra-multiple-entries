@@ -7,9 +7,21 @@
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
+  "repository": {
+    "url": "https://github.com/iamandrewluca/cra-multiple-entries",
+    "type": "git"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "entry-link": "cd src && ln -sf $ENTRY.js index.js && cd ..",
+    "entry-start": "npm run entry-link && react-scripts start",
+    "entry-build": "npm run entry-link && react-scripts build && mv build build-$ENTRY",
+
+    "start-admin": "ENTRY=admin npm run entry-start",
+    "build-admin": "ENTRY=admin npm run entry-build",
+
+    "start-client": "ENTRY=client npm run entry-start",
+    "build-client": "ENTRY=client npm run entry-build",
+
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

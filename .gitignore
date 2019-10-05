@@ -8,8 +8,12 @@
 # testing
 /coverage
 
+/src/index.js
+
 # production
 /build
+/build-admin
+/build-client
 
 # misc
 .DS_Store
